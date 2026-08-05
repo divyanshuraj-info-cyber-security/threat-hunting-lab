@@ -107,8 +107,6 @@ where host.os.type == "windows"
 ```
 ## 10. Microsoft Sentinel KQL Query
 
-</>kql
-
 DeviceProcessEvents
 ```| where FileName in~ ("powershell.exe", "pwsh.exe")
 | where ProcessCommandLine has_any (
@@ -132,7 +130,7 @@ DeviceProcessEvents
 | order by Timestamp desc
 ```
 
-##11. Simulated Investigation Scenario
+## 11. Simulated Investigation Scenario
 
 The following synthetic event was identified:
 Timestamp: 2026-08-01 10:42:17 UTC
@@ -145,7 +143,7 @@ Destination IP: 192.0.2.45
 Destination Port: 443
 The IP address 192.0.2.45 belongs to a documentation-only address range and does not represent a real system.
 
-##12. Investigation Workflow
+## 12. Investigation Workflow
 
 Step 1: Validate the process chain
 
@@ -222,7 +220,7 @@ Services
 WMI subscriptions
 PowerShell profiles
 
-##13. Evidence Assessment
+## 13. Evidence Assessment
 
 | Evidence                            | Assessment                      |
 | ----------------------------------- | ------------------------------- |
@@ -234,7 +232,7 @@ PowerShell profiles
 | Similar activity on other endpoints | Possible wider compromise       |
 
 
-##14. Potential False Positives
+## 14. Potential False Positives
 
 Possible legitimate causes include:
 
@@ -256,7 +254,7 @@ Execution frequency
 Historical baseline
 Destination reputation
 
-##15. Hunt Findings
+## 15. Hunt Findings
 
 The simulated activity is considered suspicious because:
 
@@ -266,7 +264,7 @@ The process used hidden-window execution
 An outbound connection was initiated
 The behaviour was not part of an approved administrative activity
 
-##16. Recommended Response Actions
+## 16. Recommended Response Actions
 
 Isolate the affected endpoint where business impact permits
 Terminate the malicious process
@@ -279,7 +277,7 @@ Remove persistence mechanisms
 Perform endpoint remediation
 Continue monitoring after recovery
 
-##17. Detection Recommendation
+## 17. Detection Recommendation
 
 Create a detection for PowerShell execution where one or more of the following are present:
 
@@ -301,7 +299,7 @@ Persistence
 Lateral movement
 Multiple affected endpoints
 
-##18. Conclusion
+## 18. Conclusion
 
 The hunt demonstrates how process telemetry, PowerShell logs, network events, file activity, and threat intelligence can be correlated to identify suspicious PowerShell execution.
 
