@@ -20,11 +20,6 @@ This repository demonstrates practical capability in:
 | Hunt | Data Sources | ATT&CK Techniques | Status |
 |---|---|---|---|
 | Suspicious PowerShell Execution | Windows, Sysmon, EDR, SIEM | T1059.001, T1027 | Completed |
-| Scheduled Task Persistence | Windows, Sysmon, EDR | T1053.005 | Planned |
-| Suspicious SMB Lateral Movement | Windows, Firewall, EDR | T1021.002 | Planned |
-| Anomalous Microsoft 365 Sign-in | Entra ID, Microsoft 365 | T1078 | Planned |
-| Command-and-Control Activity | EDR, DNS, Proxy, Firewall | T1071.001 | Planned |
-| Potential Data Exfiltration | DLP, Proxy, Firewall, Endpoint | T1041 | Planned |
 
 ## Repository Structure
 
